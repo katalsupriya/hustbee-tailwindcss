@@ -1,0 +1,376 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hustbee</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <section class="relative bg-secondary-1100">
+        <!-- <div class="bg-[url('/public/img/cloud-bg.svg')] absolute top-0	left-0 w-full h-full bg-no-repeat bg-cover bg-center opacity-10 z-10"></div> -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-6 lg:justify-start">
+                <div class="flex justify-start lg:w-32">
+                    <a href="#">
+                        <span class="sr-only">Workflow</span>
+                        <img class="h-6 w-auto lg:h-7" src="/public/img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 lg:hidden">
+                    <button type="button" class="text-white rounded-lg p-2 hamburger" aria-expanded="false"
+                        onclick="togglehamburger()">
+                        <span class="sr-only">Open menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="hidden lg:flex m-auto lg:space-x-10">
+                    <a href="#" class="text-white font-normal">
+                        Light Header
+                    </a>
+
+                    <div class="relative">
+                        <button type="button" class=" border-secondary-900 text-white font-normal opacity-80"
+                            id="dropdownButton" data-dropdown-toggle="dropdown">
+                            <span>Hosting Services</span>
+                        </button>
+                        <div id="dropdown" aria-labelledby="dropdownButton"
+                            class="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-lg sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="rounded-lg shadow-lg overflow-hidden bg-primary-100">
+                                <div class="relative grid grid-cols-2 p-4 border-b border-secondary-500">
+                                    <a href="#" class="p-3 flex items-start text-secondary-1100 text-sm font-light">
+                                        <span><img src="/public/img/server1.svg" alt=""
+                                                class="w-5 brightness-200"></span>
+                                        <span class="ml-4">
+                                            Web Hosting
+                                        </span>
+                                    </a>
+
+                                    <a href="#" class="p-3 flex items-start text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server4.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Wordpress Hosting
+                                        </span>
+                                    </a><a href="#" class="p-3 flex items-start text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server2.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Cloud Hosting
+                                        </span>
+                                    </a><a href="#" class="p-3 flex items-start text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server5.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Dedicated Hosting
+                                        </span>
+                                    </a><a href="#" class="p-3 flex items-start text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server3.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            VPS Hosting
+                                        </span>
+                                    </a><a href="#" class="p-3 flex items-start text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server6.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Domain Names
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="px-4 grid grid-cols-2">
+                                    <div class="flow-root">
+                                        <a href="#"
+                                            class="p-4 flex items-center text-secondary-1100 text-sm font-light">
+                                            <i class="fas fa-chevron-right text-secondary-100 fa-sm"></i>
+                                            <span class="ml-3">Hustbee Features</span>
+                                        </a>
+                                    </div>
+                                    <div class="flow-root">
+                                        <a href="#"
+                                            class="p-4 flex items-center text-secondary-1100 text-sm font-light">
+                                            <i class="fas fa-chevron-right text-secondary-100 fa-sm"></i>
+                                            <span class="ml-3">Website builder</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-white font-normal">
+                        Domains
+                    </a>
+
+                    <a href="#" class="text-white font-normal">
+                        Support
+                    </a>
+
+                    <div class="relative">
+                        <button type="button" class=" border-secondary-900 text-white font-normal opacity-80"
+                            id="pagesdropdownButton" data-dropdown-toggle="pagesdropdown">
+                            <span>Pages</span>
+                        </button>
+                        <div id="pagesdropdown" aria-labelledby="pagesdropdownButton"
+                            class="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-36 sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="rounded-lg shadow-lg overflow-hidden bg-primary-100">
+                                <div class="relative">
+                                    <ul class="py-1.5">
+                                        <li><a class="text-secondary-1100 text-sm font-light py-0.5 px-5">About</a></li>
+                                        <li><a class="text-secondary-1100 text-sm font-light py-0.5 px-5">Blog</a></li>
+                                        <li><a class="text-secondary-1100 text-sm font-light py-0.5 px-5">Privacy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hidden lg:flex items-center justify-end lg:flex-row">
+                    <div>
+                        <a href="#"
+                            class="whitespace-nowrap text-secondary-100 font-normal text-sm flex mb-1.5 bg-secondary-900 hover:bg-secondary-1000 duration-75 ease-in rounded-full py-0.5 px-5">
+                            <img src="/public/img/lock.svg" alt="" class="w-3 mr-2.5">Client Area
+                        </a>
+                        <div class="chat-info text-white font-normal text-sm"><i
+                                class="fas fa-arrow-right text-primary-800 mr-1.5"></i>Chat Available</div>
+                    </div>
+                    <a href="#"
+                        class="ml-8 flex items-center justify-center rounded-lg h-12 w-12 text-white bg-primary-800 hover:bg-primary-700">
+                        <i class="fa-regular fa-comments fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bg-secondary-1100 top-auto inset-x-0 transition transform origin-top-right hidden lg:hidden"
+            id="mobileNavbar">
+            <div class="p-5">
+
+                <nav class="grid gap-y-8 text-center">
+                    <a href="#" class="text-white font-normal">
+                        Light Header
+                    </a>
+
+                    <div class="relative mobile-button">
+                        <button type="button"
+                            class=" border-secondary-900 text-white font-normal opacity-80 mobile-menu">
+                            <span>Hosting Services</span>
+                        </button>
+                        <div
+                            class="hidden absolute z-10 inset-x-0 p-2 transition transform origin-top-right dropdownContent">
+                            <div class="rounded-lg shadow-lg overflow-hidden bg-primary-100">
+                                <div class="relative grid p-4 border-b border-secondary-500">
+                                    <a href="#" class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                        <span><img src="/public/img/server1.svg" alt=""
+                                                class="w-5 brightness-200"></span>
+                                        <span class="ml-4">
+                                            Web Hosting
+                                        </span>
+                                    </a>
+
+                                    <a href="#" class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server4.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Wordpress Hosting
+                                        </span>
+                                    </a><a href="#"
+                                        class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server2.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Cloud Hosting
+                                        </span>
+                                    </a><a href="#"
+                                        class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server5.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Dedicated Hosting
+                                        </span>
+                                    </a><a href="#"
+                                        class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server3.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            VPS Hosting
+                                        </span>
+                                    </a><a href="#"
+                                        class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                        <img src="/public/img/server6.svg" alt="" class="w-5 brightness-200">
+                                        <span class="ml-4">
+                                            Domain Names
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="px-4 grid">
+                                    <div class="flow-root">
+                                        <a href="#"
+                                            class="p-3 flex items-center text-secondary-1100 text-sm font-light">
+                                            <i class="fas fa-chevron-right text-secondary-100 fa-sm"></i>
+                                            <span class="ml-3">Hustbee Features</span>
+                                        </a>
+                                    </div>
+                                    <div class="flow-root">
+                                        <a href="#"
+                                            class="px-3 pb-3 flex items-center text-secondary-1100 text-sm font-light">
+                                            <i class="fas fa-chevron-right text-secondary-100 fa-sm"></i>
+                                            <span class="ml-3">Website builder</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-white font-normal">
+                        Domains
+                    </a>
+
+                    <a href="#" class="text-white font-normal">
+                        Support
+                    </a>
+
+                    <div class="relative mobile-button">
+                        <button type="button"
+                            class=" border-secondary-900 text-white font-normal opacity-80 mobile-menu">
+                            <span>Pages</span>
+                        </button>
+                        <div
+                            class="hidden absolute z-10  inset-x-0 p-2 transition transform origin-top-right dropdownContent">
+                            <div class="rounded-lg shadow-lg overflow-hidden bg-primary-100">
+                                <div class="relative">
+                                    <ul class="py-1.5">
+                                        <li><a class="text-secondary-1100 text-sm font-light py-0.5 px-5">About</a></li>
+                                        <li><a class="text-secondary-1100 text-sm font-light py-0.5 px-5">Blog</a></li>
+                                        <li><a class="text-secondary-1100 text-sm font-light py-0.5 px-5">Privacy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Slider section -->
+        <section class="bg-secondary-1100 relative">
+            <div class="container max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1">
+                    <div class="main-slider py-20 hidden">
+
+                        <!-- Slider 1 -->
+                        <div class="slide py-20">
+                            <div class="flex items-center w-full">
+                                <div class="text w-2/3">
+                                    <h1 class="text-7xl text-white font-bold">Outstanding Web</h1>
+                                    <h1 class="text-7xl text-white font-bold mb-8">Hosting for you.</h1>
+                                    <h4 class="text-xl text-white font-light mb-14">Starting at only
+                                        <span class="font-bold">$2.38/mo*</span></h4>
+                                    <a href="#" class="btn text-lg font-medium text-secondary-1300 bg-warning-100 rounded-full py-2.5 px-5 transition ease-in 
+                                    duration-300 hover:bg-warning-200">
+                                        Hosting Services
+                                    </a>
+                                </div>
+                                <div class="img-holder w-1/3">
+                                    <img src="/public/img/slide-img1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./End Slider 1 -->
+
+                        <!--  Slider 2 -->
+                        <div class="slide py-20">
+                            <div class="flex items-center w-full">
+                                <div class="text w-2/3">
+                                    <h1 class="text-7xl text-white font-bold">Create your first</h1>
+                                    <h1 class="text-7xl text-white font-bold mb-8">website today.</h1>
+                                    <h4 class="text-xl text-white font-light mb-14">Starting at only
+                                        <span class="font-bold">$2.38/mo*</span></h4>
+                                    <a href="#" class="btn text-lg font-medium text-secondary-1300 bg-warning-100 rounded-full py-2.5 px-5 transition ease-in 
+                                    duration-300 hover:bg-warning-200">
+                                        Create now
+                                    </a>
+                                </div>
+                                <div class="img-holder w-1/3">
+                                    <img src="/public/img/slide-img2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./End Slider 2 -->
+
+                        <!--  Slider 3 -->
+                        <div class="slide py-20">
+                            <div class="flex items-center w-full">
+                                <div class="text w-2/3">
+                                    <h1 class="text-7xl text-white font-bold">Build your site</h1>
+                                    <h1 class="text-7xl text-white font-bold mb-8">with page builder</h1>
+                                    <h4 class="text-xl text-white font-light mb-14">Starting at only
+                                        <span class="font-bold">$2.38/mo*</span></h4>
+                                    <a href="#" class="btn text-lg font-medium text-secondary-1300 bg-warning-100 rounded-full py-2.5 px-5 transition ease-in 
+                                    duration-300 hover:bg-warning-200">
+                                        Learn more
+                                    </a>
+                                </div>
+                                <div class="img-holder w-1/3">
+                                    <img src="/public/img/slide-img3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./End Slider 3 -->
+
+                        <!--  Slider 3 -->
+                        <div class="slide py-20">
+                            <div class="text-center	w-full">
+                                <div class="text">
+                                    <h1 class="text-7xl text-white font-bold">Simple, affordable</h1>
+                                    <h1 class="text-7xl text-white font-bold mb-8">Web Hosting</h1>
+                                    <form class="w-4/5">
+                                    </form>
+                                    <div class="relative w-full  mb-4">
+                                        <input class="text-2xl	bg-white text-secondary-1100 py-3.5 z-10 outline-none px-8 border-primary-400 font-light border-2	 
+                                            rounded-full  w-3/5" placeholder="My domain name" required>
+                                        <span class="btn-group absolute flex top-0 right-64">
+                                            <a class="  bg-warning-100 text-secondary-1100 text-xl font-semibold py-1.5 px-7 
+                                            rounded-full cursor-pointer  hover:bg-warning-200
+                                             my-3 mr-1.5">
+                                                Search
+                                            </a>
+                                            <a class="   bg-primary-400 text-white text-xl font-semibold py-1.5 px-7 
+                                            rounded-full   hover:bg-primary-600 cursor-pointer
+                                            my-3">
+                                                Transfer
+                                            </a>
+                                        </span>
+
+                                    </div>
+                                    <h4 class="text-xl text-white font-light mb-14">Starting at only
+                                        <span class="font-bold">$2.38/mo*</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./End Slider 3 -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Slider section -->
+    </section>
+    <!-- Navbar section -->
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="/node_modules/@themesberg/flowbite/dist/flowbite.bundle.js"></script>
+</body>
+
+</html>
